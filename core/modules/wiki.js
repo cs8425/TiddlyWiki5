@@ -1472,7 +1472,9 @@ exports.readFile = function(file,options) {
 		file: file,
 		type: type,
 		isBinary: isBinary,
-		callback: callback
+		callback: callback,
+		deserializer: options.deserializer,
+		options,
 	}) !== true) {
 		this.readFileContent(file,type,isBinary,options.deserializer,callback);
 	}
